@@ -16,4 +16,6 @@ bands_plot.in: re-arranges band structure data in a format that projects three-d
 
 batch_script.sl: batch script for batch scheduling and allocating of computer resources.
 
-output.in: shows the GNR unit cell and useful outputs such as band structure plot and energy band gap.
+OutputLog.out: contains all outputs from scf.in, nscf.in, bands.in, and bands_plot.in calculations.
+
+output.pdf: shows the GNR unit cell and useful outputs such as band structure plot and energy band gap. 
