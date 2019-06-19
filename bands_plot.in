@@ -1,0 +1,7 @@
+&bands
+    prefix='cc'
+    outdir='./'
+    filband = 'cc_bands.dat'
+    no_overlap = .true.
+    lsym =.false.
+/

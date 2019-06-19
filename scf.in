@@ -1,0 +1,66 @@
+&control
+    restart_mode ='from_scratch'
+    wf_collect = .false.
+    prefix ='cc'
+    pseudo_dir = './'
+    outdir = './'
+    tprnfor = .true.
+    tstress = .true.
+    calculation = 'scf'
+    title = 'GNR'
+/
+&system
+    ecutwfc = 150.0
+    ecutrho = 600.0
+    occupations = 'smearing'
+    degauss = 0.005
+    ibrav = 8
+    celldm(1) = 42.0
+    celldm(2) = 0.192
+    celldm(3) = 1.00
+    nat = 18
+    ntyp = 2
+    occupations = 'fixed'
+    nosym    = .false.
+        
+/
+&electrons
+   diagonalization = 'david'
+   diago_david_ndim = 4
+   diago_full_acc = .true.
+   electron_maxstep = 500
+   mixing_beta = 0.05
+   conv_thr = 1.0d-8
+ /
+&ions
+ /
+&cell
+ /
+ATOMIC_SPECIES
+H 1.0079 H.pz-rrkjus_psl.1.0.0.UPF
+C 12.011 C.pz-n-rrkjus_psl.0.1.UPF
+
+
+ATOMIC_POSITIONS {angstrom}
+C          1.25700        2.13800        0.18550
+H          0.32070        1.59810        0.19560
+C          1.25740        3.54620        0.17330
+H          0.32080        4.08660        0.18170
+C          3.69980        2.13310        0.18310
+C          2.47510        1.43170        0.19160
+C          3.69980        3.55040        0.15740
+C          2.47620        4.25220        0.15380
+C          6.14510        2.13310        0.20690
+C          4.92210        1.43000        0.20630
+C          6.14480        3.55040        0.16850
+C          4.92260        4.25330        0.14220
+C          8.58810        2.13870        0.25110
+C          7.36870        1.43220        0.25030
+C          8.58850        3.54640        0.19600
+C          7.36950        4.25150        0.15940
+H          9.52350        1.59990        0.29140
+H          9.52440        4.08550        0.18290
+
+
+K_POINTS {automatic}
+1 32 1 0 0 0  
